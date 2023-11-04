@@ -82,8 +82,7 @@
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
-  -webkit-animation: shift 0.5s infinite ease-in-out alternate;
-          animation: shift 0.5s infinite ease-in-out alternate;
+  animation: shift 0.5s infinite ease-in-out alternate;
   inset-inline-start: -19px;
   inset-block-start: 0;
 }
