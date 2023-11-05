@@ -69,7 +69,6 @@
   font-weight: var(--accent-font-normal-weight);
   text-transform: uppercase;
   background-color: transparent;
-  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -111,4 +110,188 @@
 
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-block-end: 100px;
+}
+
+.card {
+  inline-size: var(--content-inline-size);
+  border: 2px solid var(--theme-main-color, #000);
+  font-size: var(--content-font-size);
+  background-color: var(--background-color, #fff);
+}
+
+.card__title {
+  margin: 5px 10px 4px;
+  font-size: inherit;
+  line-height: 1.22; 
+  font-variation-settings: 'wght' var(--main-font-bold-weight);
+}
+
+.card__image-container {
+  position: relative;
+  border-block: 2px solid var(--theme-main-color, #000);
+}
+
+.label-image {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
+  z-index: 1;
+  opacity: 0.5;
+  color: var(--theme-main-color);
+  font-family: var(--accent-font, 'Press Start 2P'), fantasy, sans-serif;
+  font-weight: 400;
+  font-size: var(--button-font-size);
+  text-shadow:
+    -1px -1px var(--background-color),
+    -1px 1px var(--background-color),
+    1px -1px var(--background-color),
+    1px 1px var(--background-color);
+  mix-blend-mode: hard-light;
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1;
+}
+
+.card__paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin: 25px;
+  font-size: inherit;
+  line-height: var(--extra-line-height);
+}
+
+.card__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 6px;
+  margin: 0 25px 25px;
+  font-size: var(--button-font-size);
+}
+
+.card__icon-button {
+  display: flex;
+  align-items: flex-end;
+  min-block-size: 38px;
+  border: none;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  background-color: transparent;
+  transition: outline 0.3s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--theme-main-color);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.like-icon {
+  display: block;
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.button {
+  position: relative;
+  border: 2px solid var(--theme-main-color, #000);
+  padding: 11px 17px 6px;
+  background-color: var(--background-color);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--theme-main-color, #000);
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  inline-size: fit-content;
+  margin-block-start: 1px;
+  color: var(--accent-button-color);
+  font-family: var(--accent-font, 'Press Start 2P'), fantasy, sans-serif;
+  font-size: var(--button-font-size);
+  line-height: 0.9;
+  mix-blend-mode: difference;
+}
+
+.save-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  max-inline-size: 339px;
+  padding: 15px 20px;
+}
+
+.save-icon {
+  position: relative;
+  z-index: 1;
+  display: block;
+  inline-size: 21px;
+  block-size: 21px;
+  fill: var(--accent-button-color);
+  mix-blend-mode: difference;
+}
+
+.dialog_popup {
+  max-inline-size: 357px;
+  min-block-size: min-content;
+  border: 2px solid var(--theme-main-color, #000);
+  padding: 30px;
+  background-color: var(--background-color);
+}
+
+.dialog_popup::backdrop {
+  background: rgb(0 0 0 / 0.75);
+}
+
+.dialog_popup[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.popup__container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog-icon {
+  display: block;
+  inline-size: 39px;
+  block-size: 38px;
+  fill: var(--accent-button-color);
+  mix-blend-mode: difference;
+}
+
+.dialog_close-button {
+  inline-size: 100%;
 }
