@@ -1,23 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --background-color: #fff;
-    --main-font: 'Inter-Variable';    
-    --main-color: #000;
-    --main-font-bold-weight: 700;
-    --main-font-normal-weight: 400;
-    --background-gradient-image: repeating-linear-gradient(#d3d3d3 0 2px,transparent 2px 4px),
-      repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
-      linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
-    --accent-font: 'Press Start 2P';
-    --accent-font-normal-weight: 400;
-    --accent-button-color: #fff;
-    --content-font-size: 18px;
-    --button-font-size: 14px;
-    --extra-line-height: 1.16667;
-    --content-inline-size: min( 100%, clamp(29.6875rem, 22.7655rem + 23.3161vw, 43.75rem) );
-    --heart-outline: #000;
-    --heart-active: #f00;
-    }
-
-
-    
+  --background-color: #fff;
+  --main-font: "Inter-Variable";
+  --main-color: #000;
+  --main-font-bold-weight: 700;
+  --main-font-normal-weight: 400;
+  --background-gradient-image: repeating-linear-gradient(
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+  --accent-font: "Press Start 2P";
+  --accent-font-normal-weight: 400;
+  --accent-button-color: #fff;
+  --content-font-size: 18px;
+  --button-font-size: 14px;
+  --extra-line-height: 1.16667;
+  --content-inline-size: min(
+    100%,
+    clamp(29.6875rem, 22.7655rem + 23.3161vw, 43.75rem)
+  );
+  --heart-outline: #000;
+  --heart-active: #f00;
+}
