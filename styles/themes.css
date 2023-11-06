@@ -1,4 +1,4 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.theme
 Придерживайтесь такого именования классов:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
@@ -6,44 +6,39 @@
 */
 :root.theme-light {
     --background-color: #fff;
-    --background-image: repeating-linear-gradient(
-        #d3d3d3 0 2px,
-        transparent 2px 4px
-      ),
-      repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
-      linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
     --main-color: #000;
     --accent-button-color: #fff;
-    --heart-contour: #000;
+    --heart-outline: #000;
     --main-font-normal-weight: 400;
     --main-font-bold-weight: 700;
+    --background-gradient-image: repeating-linear-gradient(#d3d3d3 0 2px,transparent 2px 4px),
+      repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
   }
   
   :root.theme-dark {
     --background-color: #000;
-    --background-image: repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
-      repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
-      linear-gradient(#007f0c 0, #004306 100%);
     --main-color: #00cc14;
     --accent-button-color: #00cc14;
-    --heart-contour: #00cc14;
+    --heart-outline: #00cc14;
     --main-font-normal-weight: 465;
     --main-font-bold-weight: 785;
+    --background-gradient-image: repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
+      linear-gradient(#007f0c 0, #004306 100%);
   }
   
   @media (prefers-color-scheme: dark) {
     :root {
       --background-color: #000;
-      --background-image: repeating-linear-gradient(
-          #000 0 2px,
-          transparent 2px 4px
-        ),
-        repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
-        linear-gradient(#007f0c 0, #004306 100%);
       --main-color: #00cc14;
       --accent-button-color: #00cc14;
-      --heart-contour: #00cc14;
-      --normal-weight: 465;
-      --bold-weight: 785;
+      --heart-outline: #00cc14;
+      --main-font-normal-weight: 465;
+      --main-font-bold-weight: 785;
+      --background-gradient-image: repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
+        linear-gradient(#007f0c 0, #004306 100%);
     }
   }
+  
