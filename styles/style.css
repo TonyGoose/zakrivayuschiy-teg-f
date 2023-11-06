@@ -23,6 +23,7 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
+  color: var(--main-color);
 }
 
 .header {
@@ -33,7 +34,7 @@
   font-family: var(--accent-font, 'Press Start 2P'), fantasy, sans-serif;
   text-transform: uppercase;
   margin-block: 100px;
-  border: 2px solid var(--theme-main-color, #000);
+  border: 2px solid var(--main-color, #000);
   inline-size: var(--content-inline-size);
   min-block-size: clamp(20.4375rem,19.5352rem + 3.8498vw,23rem);
   background-color: var(--background-color, #fff)
@@ -102,7 +103,7 @@
   left: 0;
   inline-size: 100%;
   block-size: 2px;
-  background-color: var(--theme-main-color);
+  background-color: var(--main-color);
   transition: transform 0.3s ease;
   transform: scaleX(0);
   transform-origin: left;
@@ -122,7 +123,7 @@
 
 .card {
   inline-size: var(--content-inline-size);
-  border: 2px solid var(--theme-main-color, #000);
+  border: 2px solid var(--main-color, #000);
   font-size: var(--content-font-size);
   background-color: var(--background-color, #fff);
 }
@@ -136,7 +137,7 @@
 
 .card__image-container {
   position: relative;
-  border-block: 2px solid var(--theme-main-color, #000);
+  border-block: 2px solid var(--main-color, #000);
 }
 
 .label-image {
@@ -146,7 +147,7 @@
   right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   z-index: 1;
   opacity: 0.5;
-  color: var(--theme-main-color);
+  color: var(--main-color);
   font-family: var(--accent-font, 'Press Start 2P'), fantasy, sans-serif;
   font-weight: 400;
   font-size: var(--button-font-size);
@@ -197,7 +198,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--theme-main-color);
+  outline: 2px solid var(--main-color);
 }
 
 .text-uppercase {
@@ -212,7 +213,7 @@
 
 .button {
   position: relative;
-  border: 2px solid var(--theme-main-color, #000);
+  border: 2px solid var(--main-color, #000);
   padding: 11px 17px 6px;
   background-color: var(--background-color);
   transition: box-shadow 0.3s ease;
@@ -220,7 +221,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--theme-main-color, #000);
+  box-shadow: 2px 2px 0 0 var(--main-color, #000);
 }
 
 .card__like-button {
@@ -262,7 +263,7 @@
 .dialog_popup {
   max-inline-size: 357px;
   min-block-size: min-content;
-  border: 2px solid var(--theme-main-color, #000);
+  border: 2px solid var(--main-color, #000);
   padding: 30px;
   background-color: var(--background-color);
 }
