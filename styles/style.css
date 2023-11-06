@@ -20,10 +20,12 @@
   display: grid;
   justify-items: center;
   background-color: var(--background-color, #fff);
-  background-image: var(--background-image);
+  background-image: var(--background-gradient-image);
   background-size: cover;
   background-attachment: fixed;
   color: var(--main-color);
+  font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  font-variation-settings: 'wght' var(--main-font-normal-weight);
 }
 
 .header {
@@ -144,7 +146,6 @@
   content: '';
   position: absolute;
   top: 25px;
-  right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   z-index: 1;
   opacity: 0.5;
   color: var(--main-color);
@@ -157,6 +158,7 @@
     1px -1px var(--background-color),
     1px 1px var(--background-color);
   mix-blend-mode: hard-light;
+  right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
 }
 
 .card__image {
@@ -236,7 +238,7 @@
   color: var(--accent-button-color);
   font-family: var(--accent-font, 'Press Start 2P'), fantasy, sans-serif;
   font-size: var(--button-font-size);
-  line-height: 0.9;
+  line-height: 150%;
   mix-blend-mode: difference;
 }
 
@@ -269,7 +271,8 @@
 }
 
 .dialog_popup::backdrop {
-  background: rgb(0 0 0 / 0.75);
+  background-color: var(--background-color);
+  backdrop-filter: blur(7px);
 }
 
 .dialog_popup[open] {
@@ -295,4 +298,56 @@
 
 .dialog_close-button {
   inline-size: 100%;
+}
+
+.card__image-stairs {
+  filter: contrast(85%) saturate(700%);
+}
+
+.card__image-blank {
+  filter: opacity(60%) saturate(700%);
+}
+
+.card__image-training {
+  filter: brightness(0.7) hue-rotate(15deg);
+}
+
+.card__image-dog {
+  filter: grayscale(0.4) sepia(0.7);;
+}
+
+.card__image-surf {
+  filter: sepia(0.9) saturate(700%);
+}
+
+.card__image-climb {
+  filter: grayscale(0.8) blur(1px);
+}
+
+.card__picture-cocktails {
+  filter: contrast(70%) saturate(60%);
+}
+
+.card__picture-mountain {
+  filter: contrast(90%) saturate(200%);
+}
+
+@media (width <= 375px) {
+  .header__logo {
+    font-size: clamp(2.625rem, -0.5833rem + 15.5556vw, 3.0625rem);
+  }
+
+  .save-button {
+    max-inline-size: 310px;
+  }
+
+  .save-icon {
+    inline-size: 29px;
+    block-size: 28px;
+  }
+
+  .dialog_popup {
+    max-inline-size: 341px;
+    padding-inline: 40px;
+  }
 }
