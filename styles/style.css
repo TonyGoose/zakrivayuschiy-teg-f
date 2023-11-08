@@ -24,7 +24,7 @@
   background-size: cover;
   background-attachment: fixed;
   color: var(--main-color);
-  font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
   font-variation-settings: "wght" var(--main-font-normal-weight);
 }
 
@@ -33,7 +33,7 @@
   grid-template-rows: repeat(3, min-content);
   justify-items: center;
   place-content: end center;
-  font-family: var(--accent-font, "Press Start 2P"), fantasy, sans-serif;
+  font-family: var(--accent-font);
   text-transform: uppercase;
   margin-block: 100px;
   border: 2px solid var(--main-color, #000);
@@ -149,7 +149,7 @@
   z-index: 1;
   opacity: 0.5;
   color: var(--main-color);
-  font-family: var(--accent-font, "Press Start 2P"), fantasy, sans-serif;
+  font-family: var(--accent-font);
   font-weight: 400;
   font-size: var(--button-font-size);
   text-shadow: -1px -1px var(--background-color),
@@ -159,12 +159,21 @@
   right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
 }
 
+@supports (text-stroke: 1px var(--background-color)) or
+  (-webkit-text-stroke: 1px var(--background-color)) {
+  .label-image {
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
+  }
+}
+
 .card__image {
   display: block;
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
 }
 
 .card__paragraph {
@@ -269,8 +278,7 @@
 }
 
 .dialog_popup::backdrop {
-  background-color: var(--background-color);
-  backdrop-filter: blur(7px);
+  background: rgb(0 0 0 / 0.75);
 }
 
 .dialog_popup[open] {
