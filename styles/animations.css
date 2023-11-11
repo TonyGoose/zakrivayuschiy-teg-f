@@ -102,4 +102,5 @@
 
 .like-icon.is-liked .sparks {
   animation: heart_sparks-visible 0.3s 0.3s ease-in alternate;
+  animation-iteration-count: 1;
 }
