@@ -11,7 +11,7 @@
     ),
     repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
-  --accent-font: 'PressStart2P', fantasy, sans-serif;
+  --accent-font: 'PressStart2P', fantasy;
   --accent-font-normal-weight: 400;
   --accent-button-color: #fff;
   --content-font-size: 18px;
